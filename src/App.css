@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+.App {
+  padding: 0;
+}
+#Title {
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 136, 0);
+  font-family: Kanit;
+  font-size: 50px;
+  display: inline-block;
+}
+
