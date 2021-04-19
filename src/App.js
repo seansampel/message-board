@@ -1,6 +1,7 @@
 import './App.css';
 import Button from './components/Button';
 import Navbar from './components/Navbar';
+import CommentBar from './components/CommentBar';
 
 function App() {
   return (
@@ -8,13 +9,13 @@ function App() {
       <header className="App-header">
       <p
           id="Title">
-          Screddit
+          
       </p>
       <Navbar />
         <form 
           type="value"
         >
-          <input ></input>
+        <CommentBar />  
         <Button />
         </form>
       </header>
