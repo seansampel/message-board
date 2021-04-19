@@ -1,9 +1,10 @@
 import React from 'react'
+import '../styles/button.css';
 
-export const Button = () => {
+const Button = () => {
   return (
     <div>
-        <button>Comment</button> 
+        <button id="button">Post</button> 
     </div>
   )
 }
