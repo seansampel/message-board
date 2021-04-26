@@ -1,13 +1,13 @@
-#post-box {
+#comment-box {
   position: relative;
   font-family: Nunito;
   font-size: 1rem;
   border: 1px #000000;
   border-radius: 10px;
   background-color: rgb(241, 241, 241);
-  color: rgb(5, 5, 5);
-  margin-top: 10%;
-  padding: 0.5rem 1.5rem;
+  color: rgb(95, 95, 95);
+  margin-top: 5%;
+  padding: 0.8rem 1.5rem;
   width: 85vw;
   height: 5vw;
 }

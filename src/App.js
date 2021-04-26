@@ -1,7 +1,8 @@
 import './App.css';
-import Button from './components/Button';
+import AddComment from './components/AddComment';
 import Navbar from './components/Navbar';
-import Post from './components/Post';
+// import Post from './components/Post';
+import Comment from './components/Comment';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import { Component } from 'react';
@@ -22,11 +23,13 @@ class App extends Component {
     measurementId: "G-ZQ6EE0ZEZC"
   };
 
-  this.app = firebase.initializeApp(config);
-  this.database = this.app.database();
+  // this.app = firebase.initializeApp();
+  // this.database = this.app.database();
   };
 
   render() {
+    
+
     return (
     <div className="App">
         <header className="App-header">
@@ -35,11 +38,10 @@ class App extends Component {
         <h3><p>music discussion forum only...</p></h3>
         </div>
         <div>
-        <Post id="post-box" />
-        <Button />
+        <AddComment />
+        <Comment />
         </div>
         </header>
-        <div><p>Here is some text</p></div>
         <footer id="copyright"><h6>&copy;SampelMedia</h6></footer>
       </div>  
     )
