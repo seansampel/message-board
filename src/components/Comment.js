@@ -4,33 +4,36 @@ import Post from '../components/Post';
 import AddComment from '../components/AddComment'; 
 
 function Comment() {
-  const [comments, setComments] = useState('');
+  const [addComments, setAddComments] = useState([]);
 
-  const newComment = comment => {
-    if(!comment.text || /^\s*$/.test(comment.text)) {
-      return 
+  const newComment = addComment => {
+    if(!addComment.text || /^\s*$/.test(addComment.text)) {
+      return;
     }
-    const newComments = [comment, ...comments]
+    const newComments = [addComment, ...addComments]
 
-    setComments(newComments);
+    setAddComments(newComments);
+    console.log(...addComments);
   };
 
   const completeComment = id => { 
-    let updatedComments = newComment.map(comments => {
-      if (comments.id === id) {
-        newComment.isComplete = !newComment.isComplete;
+    let updatedComments = addComments.map(addComment => {
+      if (addComment.id === id) {
+        addComment.isComplete = !addComment.isComplete;
       }
-      return comments;
+      return addComment;
     });
-    setComments(updatedComments);
+    setAddComments(updatedComments);
   };
  
 
 
   return (
     <div>
-      <Post onSubmit={newComment}/>
-      <AddComment comments={comments} completeComment={completeComment}
+      <Post onSubmit={newComment} />
+      <AddComment 
+        addComments={addComments} 
+        completeComment={completeComment}
       />
     </div>
   )

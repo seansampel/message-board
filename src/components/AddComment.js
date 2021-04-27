@@ -1,23 +1,34 @@
 import React, { useState } from 'react'
-import Post from '../components/Post'; 
+import Post from './Post'; 
 import '../styles/button.css';
 import { RiCloseLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
 
-function AddComment ({ posts, completeComment }) {
-  const [newPosts, setNewPosts] = useState({
+const AddComment = ({ addComments, completeComment, updateAddComment }) => {
+  const [edit, setEdit] = useState({
     id: null,
     value: ''
-  }) 
-    
-  
+  });
+   
+const submitUpdate = value => {
+  updateAddComment(edit.id, value);
+  setEdit({
+    id: null, 
+    value: ''
+  });
+};
 
-  return newPosts.map((post, index) => (
+if (edit.id) {
+  return <Post edit={edit} onSubmit={submitUpdate} />;
+}
+
+  return addComments.map((addComment, index) => (
     <div 
-      className={post.isRendered ? 'Comment posted' : 'Comment-row'} 
+      className={addComment.isPosted ? 'Comment posted' : 'Comment-row'} 
       key={index}
     >
-    <div key={posts.id} onClick={() => completeComment(posts.id)}>
+    <div key={addComment.id} onClick={() => completeComment(addComment.id)}>
+      {addComment.text}
     </div>
     <div className="icons" >
       <RiCloseLine />

@@ -1,15 +1,14 @@
 import './App.css';
-import AddComment from './components/AddComment';
 import Navbar from './components/Navbar';
 // import Post from './components/Post';
 import Comment from './components/Comment';
 import firebase from 'firebase/app';
 import 'firebase/database';
-import { Component } from 'react';
+// import { Component } from 'react';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+function App()  {
+  // constructor(props) {
+  //   super(props);
 
   const config = 
   {
@@ -25,9 +24,9 @@ class App extends Component {
 
   // this.app = firebase.initializeApp();
   // this.database = this.app.database();
-  };
+  // };
 
-  render() {
+  // render() {
     
 
     return (
@@ -38,14 +37,13 @@ class App extends Component {
         <h3><p>music discussion forum only...</p></h3>
         </div>
         <div>
-        <AddComment />
         <Comment />
         </div>
         </header>
         <footer id="copyright"><h6>&copy;SampelMedia</h6></footer>
       </div>  
     )
-  }
+  
 };
 
 export default App;

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../styles/post.css';
 
-const Post = (props) => {
+function Post (props) {
   const [posts, setPosts] = useState('');
 
   const handleChange = e => {
@@ -15,10 +15,8 @@ const Post = (props) => {
     id: Math.floor(Math.random() * 10000),
     text: posts
   })
-    setPosts();
+    setPosts('');
   };
-
-
 
   return (
     <div>
