@@ -10,17 +10,17 @@ const AddComment = ({ addComments, completeComment, updateAddComment }) => {
     value: ''
   });
    
-const submitUpdate = value => {
-  updateAddComment(edit.id, value);
-  setEdit({
-    id: null, 
-    value: ''
-  });
-};
+// const submitUpdate = value => {
+//   updateAddComment(edit.id, value);
+//   setEdit({
+//     id: null, 
+//     value: ''
+//   });
+// };
 
-if (edit.id) {
-  return <Post edit={edit} onSubmit={submitUpdate} />;
-}
+// if (edit.id) {
+//   return <Post edit={edit} onSubmit={submitUpdate} />;
+// }
 
   return addComments.map((addComment, index) => (
     <div 
@@ -32,8 +32,6 @@ if (edit.id) {
     </div>
     <div className="icons" >
       <RiCloseLine />
-      <TiEdit />
-
     </div>
     </div>
     ));

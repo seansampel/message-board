@@ -6,33 +6,32 @@ function Post (props) {
 
   const handleChange = e => {
     setPosts(e.target.value);
-  }
+  };
   
   const handleSubmit = e => {
     e.preventDefault();
 
     props.onSubmit({
-    id: Math.floor(Math.random() * 10000),
+    id: [Math.floor(Math.random() * 10000)],
     text: posts
-  })
+  }); 
     setPosts('');
   };
 
   return (
     <div>
       <form className="comment-area" onSubmit={handleSubmit}>
-        <textarea       
+        <input       
         type="text"
         id="post-box"
         placeholder="create your post..."
         onChange={handleChange}
         value={posts}
-        ></textarea>
+        ></input>
     <div>
         <button id="button"
-        onClick={handleChange}
+        onClick={handleSubmit}
         >Post</button> 
-        <p id="comment-box"> </p>
         
     </div>
       </form>
