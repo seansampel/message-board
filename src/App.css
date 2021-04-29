@@ -3,6 +3,7 @@
   background-color: rgb(250, 250, 250);
   padding: 0em;
   margin: 0em;
+  overflow: hidden;
 }
 
 #tag-line {
@@ -14,9 +15,10 @@
   font-size: 15px;
   color: rgb(187, 2, 2);
   overflow: hidden;
+  position: fixed;
 }
 #copyright {
-  position: absolute;
+  position:sticky;
   left: 0;
   right: 0;
   bottom: 0;

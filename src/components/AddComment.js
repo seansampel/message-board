@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Post from './Post'; 
 import '../styles/button.css';
 import { RiCloseLine } from 'react-icons/ri';
-import { TiEdit } from 'react-icons/ti';
+// import { TiEdit } from 'react-icons/ti';
 
 const AddComment = ({ addComments, completeComment, updateAddComment }) => {
   const [edit, setEdit] = useState({
@@ -10,20 +10,21 @@ const AddComment = ({ addComments, completeComment, updateAddComment }) => {
     value: ''
   });
    
-// const submitUpdate = value => {
-//   updateAddComment(edit.id, value);
-//   setEdit({
-//     id: null, 
-//     value: ''
-//   });
-// };
+const submitUpdate = value => {
+  updateAddComment(edit.id, value);
+  setEdit({
+    id: null, 
+    value: ''
+  });
+};
 
-// if (edit.id) {
-//   return <Post edit={edit} onSubmit={submitUpdate} />;
-// }
+if (edit.id) {
+  return <Post edit={edit} onSubmit={submitUpdate} />;
+}
 
   return addComments.map((addComment, index) => (
     <div 
+      id="comment-box"
       className={addComment.isPosted ? 'Comment posted' : 'Comment-row'} 
       key={index}
     >
@@ -31,7 +32,8 @@ const AddComment = ({ addComments, completeComment, updateAddComment }) => {
       {addComment.text}
     </div>
     <div className="icons" >
-      <RiCloseLine />
+      <RiCloseLine 
+      placeholder="Delete" />
     </div>
     </div>
     ));

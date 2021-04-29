@@ -29,21 +29,16 @@ function Comment() {
 
 
   return (
-    <div className="comment box">
+    <div className="comment">
       <Post onSubmit={newComment} />
-      {/* <AddComment 
-        // className="comment-box"
-        addComments={addComments} 
-        completeComment={completeComment}
-      /> */}
-      <p id="comment-box">
       <AddComment 
+        id="scroll"
         onSubmit={newComment}
         className="comment-box"
         addComments={addComments} 
         completeComment={completeComment}
       />
-       </p>
+       
     </div>
   )
 }

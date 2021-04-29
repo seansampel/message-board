@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <div id="Navbar">
       <img src={Devil} id="Devil" alt="Devil" />
-      <h2 id="logo">screddit</h2>
+      <h2 id="logo">audiologue</h2>
     </div>
   )
 }

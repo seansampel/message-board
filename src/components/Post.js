@@ -19,7 +19,7 @@ function Post (props) {
   };
 
   return (
-    <div>
+    <div id="form-control">
       <form className="comment-area" onSubmit={handleSubmit}>
         <input       
         type="text"
